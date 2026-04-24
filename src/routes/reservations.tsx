@@ -47,6 +47,23 @@ function ReservationsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const to = "omguptaogwhitehathacker@gmail.com";
+    const subject = `New reservation — ${form.name} (${form.occasion})`;
+    const body = [
+      `New reservation request from Roastery & Co website`,
+      ``,
+      `Name:     ${form.name}`,
+      `Email:    ${form.email}`,
+      `Phone:    ${form.phone}`,
+      `Date:     ${form.date}`,
+      `Time:     ${form.time}`,
+      `Guests:   ${form.guests}`,
+      `Occasion: ${form.occasion}`,
+      ``,
+      `Special requests:`,
+      form.notes || "(none)",
+    ].join("\n");
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
