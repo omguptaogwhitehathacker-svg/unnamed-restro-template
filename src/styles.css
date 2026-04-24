@@ -85,6 +85,17 @@
     border-color: var(--color-border);
   }
 
+  /* Globally hide any Lovable badge elements */
+  [class*="lovable-badge" i],
+  [id*="lovable-badge" i],
+  [data-lovable-badge],
+  a[href*="lovable.dev"][class*="badge" i] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }
