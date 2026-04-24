@@ -47,6 +47,23 @@ function ReservationsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const to = "omguptaogwhitehathacker@gmail.com";
+    const subject = `New reservation — ${form.name} (${form.occasion})`;
+    const body = [
+      `New reservation request from Roastery & Co website`,
+      ``,
+      `Name:     ${form.name}`,
+      `Email:    ${form.email}`,
+      `Phone:    ${form.phone}`,
+      `Date:     ${form.date}`,
+      `Time:     ${form.time}`,
+      `Guests:   ${form.guests}`,
+      `Occasion: ${form.occasion}`,
+      ``,
+      `Special requests:`,
+      form.notes || "(none)",
+    ].join("\n");
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -93,9 +110,9 @@ function ReservationsPage() {
               <div className="w-16 h-16 mx-auto rounded-full bg-primary/15 flex items-center justify-center mb-4">
                 <Check className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-display mb-2">Reservation requested</h3>
+              <h3 className="text-2xl font-display mb-2">Almost there!</h3>
               <p className="text-muted-foreground">
-                We'll confirm your booking on WhatsApp within the hour.
+                Your email app should have opened with your reservation details. Just hit Send and we'll confirm shortly.
               </p>
             </div>
           ) : (
