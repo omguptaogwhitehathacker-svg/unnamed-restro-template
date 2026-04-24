@@ -45,6 +45,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Roastery & Co — Speciality Coffee in Bangalore" },
+      { name: "description", content: "Bangalore Brews Delight is a 4-page dark-themed website for a coffee shop." },
+      { property: "og:description", content: "Bangalore Brews Delight is a 4-page dark-themed website for a coffee shop." },
+      { name: "twitter:description", content: "Bangalore Brews Delight is a 4-page dark-themed website for a coffee shop." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/de06503b-11aa-4316-96b2-e1037acca5bf/id-preview-53f4f8a5--c9a19943-7089-44fc-bad8-dff8c0a3a1f0.lovable.app-1777044151621.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/de06503b-11aa-4316-96b2-e1037acca5bf/id-preview-53f4f8a5--c9a19943-7089-44fc-bad8-dff8c0a3a1f0.lovable.app-1777044151621.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
