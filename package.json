@@ -2,10 +2,11 @@
   "name": "roastery-and-co-static",
   "version": "1.0.0",
   "private": true,
-  "description": "Static HTML/CSS/JS site — open the HTML files directly, or run `npm run dev` to serve them.",
+  "type": "module",
+  "description": "Static HTML/CSS/JS site. Open the .html files directly in a browser, or run `npm run dev` to serve them locally.",
   "scripts": {
-    "dev": "npx --yes serve -l tcp://0.0.0.0:${PORT:-8080} .",
+    "dev": "node server.mjs",
     "build": "echo 'Static site — no build step needed.'",
-    "start": "npm run dev"
+    "start": "node server.mjs"
   }
 }
