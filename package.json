@@ -2,5 +2,10 @@
   "name": "roastery-and-co-static",
   "version": "1.0.0",
   "private": true,
-  "description": "Static HTML/CSS/JS site — no build step. Open index.html in a browser."
+  "description": "Static HTML/CSS/JS site — open the HTML files directly, or run `npm run dev` to serve them.",
+  "scripts": {
+    "dev": "npx --yes serve -l tcp://0.0.0.0:${PORT:-8080} .",
+    "build": "echo 'Static site — no build step needed.'",
+    "start": "npm run dev"
+  }
 }
